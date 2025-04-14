@@ -8,15 +8,23 @@ const reset = ()=>{
     const hideen_digit = document.querySelector('.hidden-digit-number')
     const user_input = document.querySelector('.input-box')
     const score_heading = document.querySelector('.score-heading')
+    const attempts = document.querySelector('.attempts-count')
+
+    const playCount = document.querySelector('.playing-count')
+    playCount.innerText = Number( playCount.innerText ) + 1
     
     hideen_digit.value = "?"
     
     user_input.value = ""
     score_heading.innerText = "🧠 Guess the Number"
+    attempts.innerText = 5
 
     const full_screen = document.querySelector('.full-screen')
 
     full_screen.style.backgroundColor  = 'gray'
+    score_heading.style.color = 'white'
+    
+    randomNumber = ""
 
 }
 
@@ -42,8 +50,13 @@ const chekNumber = ()=>{
     const b = Number(user_input.value)
 
     const score_heading = document.querySelector('.score-heading')
+    const attempts = document.querySelector('.attempts-count')
 
-    if(randomNumber === b)
+    attempts.innerText = Number(attempts.innerText) - 1;
+
+    if(attempts.innerText <= 0) attempts.innerText = 0
+
+    if( randomNumber === b &&  attempts.innerText >= 0)
     {
         score_heading.innerText = 'You Won'
         hideen_digit.value = randomNumber
@@ -61,15 +74,30 @@ const chekNumber = ()=>{
         const full_screen = document.querySelector('.full-screen')
 
         full_screen.style.backgroundColor  = 'green'
-        
+        score_heading.style.color = 'blue'
 
+        setTimeout(  reset , 1000)
     }
-    else if( b>randomNumber )
-        {
+    else if(attempts.innerText == 0)
+    {
+       score_heading.innerText = 'You Lost!'
+        score_heading.style.color = 'gray'
+
+        const full_screen = document.querySelector('.full-screen')
+
+        full_screen.style.backgroundColor  = 'red'
+
+        setTimeout(  reset , 1000)
+        return;
+    }
+    else if( b>randomNumber)
+    {
         score_heading.innerText = 'Number is high'
+        score_heading.style.color = 'red'
     }
     else{
         score_heading.innerText = 'Number is low'
+        score_heading.style.color = 'red'
     }
     
 
