@@ -17,6 +17,7 @@ const setOnClick = (btn) =>{
     if( player.innerText === "A")
     {
         player.innerText = "B"
+        player.style.color = "green"
         btn.innerText = "A"
         btn.style.backgroundColor = "blue"
         btn.style.color = "white"
@@ -25,6 +26,7 @@ const setOnClick = (btn) =>{
     {
         player.innerText = "A"
         btn.innerText = "B"
+        player.style.color = "blue"
         btn.style.backgroundColor = "green"
         btn.style.color = "white"
     }
@@ -89,7 +91,7 @@ const checkRow = ()=>{
     {
         return true
     }
-    else if( (btn_4.innerText !=="" && btn_5.innerText !== "" && btn_6.innerText !== "" ) && ( btn_7.innerText === btn_8.innerText && btn_7.innerText === btn_9.innerText) )
+    else if( (btn_7.innerText !=="" && btn_8.innerText !== "" && btn_9.innerText !== "" ) && ( btn_7.innerText === btn_8.innerText && btn_7.innerText === btn_9.innerText) )
     {
         return true
     }
