@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    outline: none;
+    border: none;
+
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+
+.open-btn{
+    background-color: green;
+}
+.close-btn{
+    background-color: red;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overlay{
+    width: 50vw;
+    height: 50vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    color: white;
+}
+
+.overlay--active{
+    display: flex;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
