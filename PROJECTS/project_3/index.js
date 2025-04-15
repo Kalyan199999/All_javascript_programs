@@ -62,22 +62,14 @@ const checkWinner = ( playerName) => {
 }
 
 const setInitialState = () => {
-    btn_1.innerText = ""
-    btn_2.innerText = ""
-    btn_3.innerText = ""
-    btn_4.innerText = ""
-    btn_5.innerText = ""
-    btn_6.innerText = ""
-    btn_7.innerText = ""
-    btn_8.innerText = ""
-    btn_9.innerText = ""
-    winner.innerText = ""
 
     player.innerText = "A"
 
     const btn = document.querySelectorAll(".btn")
+    
     btn.forEach( (b) => {
         b.style.backgroundColor = "white"
+        b.innerText = ""
     })
 }
 
