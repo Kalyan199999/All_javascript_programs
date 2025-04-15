@@ -15,10 +15,13 @@ button{
 }
 
 .open-btn{
-    background-color: green;
+    background-color: rgb(10, 238, 10);
+
+    position: fixed;
+    top: 100px;
 }
 .close-btn{
-    background-color: red;
+    background-color: rgb(184, 18, 18);
 }
 
 .main-container{
