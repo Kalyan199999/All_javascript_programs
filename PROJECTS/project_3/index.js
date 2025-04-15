@@ -12,6 +12,16 @@ const player = document.querySelector(".player-name");
 
 const winner = document.querySelector(".winner");
 
+btn_1.addEventListener("click",()=>{setOnClick(btn_1)})
+btn_2.addEventListener("click",()=>{setOnClick(btn_2)})
+btn_3.addEventListener("click",()=>{setOnClick(btn_3)})
+btn_4.addEventListener("click",()=>{setOnClick(btn_4)})
+btn_5.addEventListener("click",()=>{setOnClick(btn_5)})
+btn_6.addEventListener("click",()=>{setOnClick(btn_6)})
+btn_7.addEventListener("click",()=>{setOnClick(btn_7)})
+btn_8.addEventListener("click",()=>{setOnClick(btn_8)})
+btn_9.addEventListener("click",()=>{setOnClick(btn_9)})
+
 const setOnClick = (btn) =>{
 
     if( player.innerText === "A")
@@ -33,16 +43,6 @@ const setOnClick = (btn) =>{
 
     checkWinner(btn.innerText)
 }
-
-btn_1.addEventListener("click",()=>{setOnClick(btn_1)})
-btn_2.addEventListener("click",()=>{setOnClick(btn_2)})
-btn_3.addEventListener("click",()=>{setOnClick(btn_3)})
-btn_4.addEventListener("click",()=>{setOnClick(btn_4)})
-btn_5.addEventListener("click",()=>{setOnClick(btn_5)})
-btn_6.addEventListener("click",()=>{setOnClick(btn_6)})
-btn_7.addEventListener("click",()=>{setOnClick(btn_7)})
-btn_8.addEventListener("click",()=>{setOnClick(btn_8)})
-btn_9.addEventListener("click",()=>{setOnClick(btn_9)})
 
 const checkWinner = ( playerName) => {
     
