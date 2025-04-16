@@ -10,10 +10,23 @@ console.log(p,q,r);
 
 let [a,b,c,d,e,f,g,h,i,j] = arr;
 
+[ a, , , , ,b ] = [10,20,30,40,50,60]
+console.log(a,b);
+
+[,,a,,b] = [10,20,30,40,50,60]
+console.log(a,b);
+
+const {3:a_3} = arr
+console.log("index-3 value:"+a_3);
+
+
 let x = [...arr]
 
 console.log(arr);
 console.log(x);
+
+
+// objects destructuring
 
 let obj = {
     name:"kalyan",
@@ -23,17 +36,32 @@ let obj = {
 
 console.log(obj);
 
-let {name,dept,age} = {...obj};
+let {name:peru,dept,age} = {...obj};
 
 obj = {...obj,age:53};
 
-console.log(name,dept,age);
+// console.log(peru,dept,age);
 
+// console.log(obj);
 
+const address={
+    city:"pamarru",
+    district:"krishna",
+    state:"AP",
+    pincode:533412
+}
+
+const games = ["cricket","football","chess","tennis"]
+
+obj.address  = address
+obj.games = games
 console.log(obj);
 
-[ a, , , , ,b ] = [10,20,30,40,50,60]
-console.log(a,b);
+const { name:ename } = obj
+console.log(ename);
 
-[,,a,,b] = [10,20,30,40,50,60]
-console.log(a,b);
+const { address:{city,pincode} } = obj
+console.log(city , pincode);
+
+const { games:[,g1] } = obj
+console.log(g1);
