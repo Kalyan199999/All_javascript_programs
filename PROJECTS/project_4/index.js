@@ -1,3 +1,5 @@
+// local storage usgae
+
 const add_btn = document.querySelector(".add-btn");
 
 const show_btn = document.querySelector(".show-btn");
