@@ -1,5 +1,4 @@
 // HTTP module
-
 const http = require('http')
 const fs = require('fs')
 
@@ -10,24 +9,24 @@ const server = http.createServer( (req, res)=>{
     // console.log(req.headers);
     console.log(req.url);
 
-    const logData = Date.now() + " " + req.url + "\n"
+    // const logData = Date.now() + " " + req.url + "\n"
 
-    fs.appendFile( "./logs.txt" , logData , (err,data)=>{
-        if(err){
-            console.log(err);
-        }
-    } )
+    // fs.appendFile( "./logs.txt" , logData , (err,data)=>{
+    //     if(err){
+    //         console.log(err);
+    //     }
+    // } )
 
     switch (req.url) {
         case "/":
-            res.end("This is the home page")
+            res.end("This is the home page!")
             break;
         case "/about":
-            res.end("This is the about page")
+            res.end("This is the about page!")
             break;
     
         default:
-            res.end("Unknown page")
+            res.end("Bad request!")
             break;
     }
     
