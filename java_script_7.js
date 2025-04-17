@@ -1,6 +1,7 @@
 // Array destructuring
 
 let arr = [1,2,3,4,5,6,7,8,9,10];
+console.log(arr);
 
 let [p,q] = [10,20,30]
 console.log(p,q);
@@ -18,13 +19,6 @@ console.log(a,b);
 
 const {3:a_3} = arr
 console.log("index-3 value:"+a_3);
-
-
-let x = [...arr]
-
-console.log(arr);
-console.log(x);
-
 
 // objects destructuring
 
