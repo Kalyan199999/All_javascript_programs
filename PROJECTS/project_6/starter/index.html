@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expensive Splitter</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!------------------------------------------------------------------------------------------>
+
+    <header>
+      <nav class="navbar">
+        <h1 class="nav_title">SmartBank</h1>
+        <div class="login">
+          <form action="" class="login_form">
+            <input
+              type="text"
+              placeholder="Name"
+              class="login_input login_input--user"
+            />
+            <input
+              type="text"
+              placeholder="PASS"
+              class="login_input login_input--pin"
+              maxlength="4"
+            />
+            <button class="login_btn">Login</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <!------------------------------------------------------------------------------------------>
+
+    <main>
+      <!------------------------------------------------------------------------------------------>
+
+      <div class="summary">
+        <div class="summary-card in-card">
+          <p class="label">In</p>
+          <h1 class="value in-card-value">0000</h1>
+        </div>
+
+        <div class="summary-card out-card">
+          <p class="label">Out</p>
+          <h1 class="value out-card-value">0000</h1>
+        </div>
+
+        <div class="summary-card interest-card">
+          <p class="label">Interest</p>
+          <h1 class="value interest-card-value">0000</h1>
+        </div>
+
+        <div class="summary-card balance-card">
+          <p class="label">Balance</p>
+          <h1 class="value balance_value">0000</h1>
+        </div>
+      </div>
+      <!------------------------------------------------------------------------------------------>
+      <div class="dashboard-container">
+        <!-- Actions Panel -->
+        <div class="actions-panel">
+          <!-- Send Funds Section -->
+          <div class="action-card send-funds-section">
+            <h3 class="action-title">Send Funds</h3>
+            <div class="action-inputs">
+              <input
+                type="text"
+                class="input-field recipient_name"
+                placeholder="Enter recipient's username"
+              />
+              <input
+                type="number"
+                class="input-field fund_amount"
+                placeholder="Enter amount to send"
+              />
+            </div>
+            <button class="action-button transfer_btn">Transfer</button>
+          </div>
+
+          <!-- Apply for Loan Section -->
+          <div class="action-card loan-request-section">
+            <h3 class="action-title">Apply for Loan</h3>
+            <div class="action-inputs">
+              <input
+                type="number"
+                class="input-field input-loan-amount"
+                placeholder="Enter desired loan amount"
+              />
+            </div>
+            <button class="action-button loan-btn">Submit Request</button>
+          </div>
+
+          <!-- Deactivate Account Section -->
+          <div class="action-card account-deletion-section">
+            <h3 class="action-title">Deactivate Account</h3>
+            <div class="action-inputs">
+              <input
+                type="text"
+                class="input-field account-deletion-username"
+                placeholder="Confirm your username"
+              />
+              <input
+                type="password"
+                class="input-field account-deletion-pin"
+                placeholder="Enter your password"
+              />
+            </div>
+            <button class="action-button account-deletion-btn">
+              Deactivate
+            </button>
+          </div>
+        </div>
+
+        <!-- Transactions History -->
+        <div class="transactions-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>TID</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody class="transactions-body">
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status success">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+              <tr>
+                <td>Abhi</td>
+                <td>
+                  <h5>20 Feb 2025</h5>
+                  <p>AT 10:00 AM</p>
+                </td>
+                <td>23423243</td>
+                <td>$100</td>
+                <td><span class="status">success</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
