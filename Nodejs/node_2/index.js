@@ -1,4 +1,7 @@
 const express = require('express')
+
+const userrouter = require('./routers/user')
+
 const app = express()
 const port = 5050
 
@@ -17,6 +20,8 @@ app.get('/about' , (req, res) => {
         data:`Hey this is ${ req.query.name} and my age is ${req.query.age}`
     } )
 })
+
+app.use( '/users' , userrouter)
 
 
 app.listen(port, () => {
