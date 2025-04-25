@@ -5,6 +5,8 @@ const userrouter = require('./routers/user')
 const app = express()
 const port = 5050
 
+app.use(express.json())
+
 app.get('/' , (req, res) => {
     res.json( {
         message: 'sending the data from the server',
@@ -22,6 +24,7 @@ app.get('/about' , (req, res) => {
 })
 
 app.use( '/users' , userrouter)
+
 
 
 app.listen(port, () => {

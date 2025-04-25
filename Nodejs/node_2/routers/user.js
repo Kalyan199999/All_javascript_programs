@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
         
         const users = JSON.parse(data);
         res.status(200).json({
-            message:"Hello from user router",
+            message:"Hello from user router get method",
             users:users
         });
     
@@ -50,7 +50,7 @@ router.get("/:id", (req, res) => {
         
         
         return res.status(200).json({
-            message:"Hello from the user route ID",
+            message:"Hello from the user route with ID",
             id:id,
             user:response
         })
@@ -64,6 +64,44 @@ router.get("/:id", (req, res) => {
     }
 
 
-  })
+  }
+)
+
+router.post("/post", (req, res) => {
+    
+    try {
+
+        const {id, name,age, email} = req.body;
+
+        const path = "C:/Users/hp/Documents/web_development/java_script/Nodejs/node_2/data.json"
+
+        const data = fs.readFileSync(path,'utf-8');
+
+        const users = JSON.parse(data);
+
+        users.push({
+            id:id,
+            name:name,
+            age:age,
+            email:email
+        })
+
+        fs.writeFileSync(path, JSON.stringify(users), 'utf-8')
+
+        return res.status(200).json({
+            message:"User added successfully",
+            user:users
+        })
+        
+    } 
+    catch (error) 
+    {
+        return res.status(201).json({
+            message:"Error occured"
+        })
+    }
+    
+})
+
 
 module.exports = router;
