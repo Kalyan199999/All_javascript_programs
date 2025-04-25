@@ -58,7 +58,7 @@ router.get("/:id", (req, res) => {
     } 
     catch (error) {
         
-        return res.status(201).send({
+        return res.status(201).json({
             message:"Error occured"
         })
     }
