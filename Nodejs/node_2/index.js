@@ -7,6 +7,38 @@ const port = 5050
 
 app.use(express.json())
 
+// Middle ware-> it is used to perform some task before the request reaches the controller and authenticate the request
+app.use((req,res,next)=>{
+    console.log('middleware-1');
+
+    req.isHacker = true;
+    
+    try {
+        next()
+    } catch (error) {
+        return res.json({
+            message: 'Access Denied!'
+        })
+        
+    }
+    
+})
+
+app.use((req,res,next)=>{
+    console.log('middleware-2');
+    
+    console.log("Is he hacker:"+req.isHacker);
+    try {
+        next()
+    } catch (error) {
+        return res.json({
+            message: 'Access Denied!'
+        })
+        
+    }
+    
+})
+
 app.get('/' , (req, res) => {
     res.json( {
         message: 'sending the data from the server',

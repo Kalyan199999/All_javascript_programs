@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    outline: none;
+
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    border: 2px solid black;
+}
+
+h1{
+    font-size: 50px;
+    color: white;
+}
+
+.section-1{
+    background-color: blueviolet;
+}
+
+.section-2{
+    background-color: skyblue;
+}
+
+.section-3{
+    background-color: purple;
+}
