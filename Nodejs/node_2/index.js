@@ -49,6 +49,8 @@ app.get('/' , (req, res) => {
 app.get('/about' , (req, res) => {
     console.log(req);
     
+    // url address is http://localhost:5050/about?name=kalyan&age=10
+    
     res.json( {
         message: 'sending the data from the server about page',
         data:`Hey this is ${ req.query.name} and my age is ${req.query.age}`

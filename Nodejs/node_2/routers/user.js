@@ -5,6 +5,9 @@ const router = express.Router();
 
 
 router.get("/", (req, res) => {
+
+    console.log(req.headers);
+    
  
     try 
     {
@@ -62,7 +65,6 @@ router.get("/:id", (req, res) => {
             message:"Error occured"
         })
     }
-
 
   }
 )
