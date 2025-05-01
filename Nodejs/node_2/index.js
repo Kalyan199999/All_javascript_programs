@@ -1,4 +1,7 @@
 const express = require('express')
+const mongoose = require('mongoose')
+
+require('dotenv').config()
 
 const userrouter = require('./routers/user')
 
@@ -63,4 +66,14 @@ app.use( '/users' , userrouter)
 
 app.listen(port, () => {
     console.log(`server started on port http://localhost:${port}`);
+
+    // Connect the Database(mongo DB)
+    try {
+        mongoose.connect( process.env.MONGO_URI)
+        console.log('Database Connected to Mongo DB');
+        
+    } catch (error) {
+        console.log('Database not Connected');
+    }
+
 })
