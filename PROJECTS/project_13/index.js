@@ -25,7 +25,7 @@ const eventHandler = (e,opacity)=>{
 }
 
 const handleElement = (currElement)=>{
-    
+
     const sections = document.querySelectorAll('.section');
 
     sections.forEach( section => {
