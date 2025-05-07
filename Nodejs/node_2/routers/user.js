@@ -4,7 +4,7 @@ const TestingUser = require("../models/userModel");
 
 const router = express.Router();
 
-
+// Get all the users
 router.get("/", async (req, res) => {
 
     // console.log(req.headers);
@@ -36,6 +36,7 @@ router.get("/", async (req, res) => {
 
 })
 
+// Get the user by ID
 router.get("/:id", async (req, res) => {
     
     try {
@@ -74,6 +75,8 @@ router.get("/:id", async (req, res) => {
 
   }
 )
+
+// Create the new user
 
 router.post("/post", async (req, res) => {
     
@@ -115,5 +118,39 @@ router.post("/post", async (req, res) => {
     
 })
 
+// Update the user
+router.patch("/update/:id", async (req, res) => {
+
+    console.log("Update the user");
+    
+    try {
+        const id = req.params.id;
+        console.log(id);
+
+        const updateUser = await TestingUser.findByIdAndUpdate(id, req.body, {new:true});
+
+        if(!updateUser)
+        {
+            return res.status(404).json({
+                message:"User not found"
+            })
+        }
+
+
+        return res.status(201).json({
+            message:"User updated successfully",
+            user:updateUser
+        })
+        
+    } 
+    catch (error) 
+    {
+        return res.status(404).json({
+            message:"User updated Failed!"
+        })    
+    }
+
+    
+})
 
 module.exports = router;
