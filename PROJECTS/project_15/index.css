@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+   
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clr-sess{
+     background-color: red;
+}
+
+.clr-local{
+     background-color: green;
+}
